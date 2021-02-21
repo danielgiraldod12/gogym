@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap'); /* fuente */
+
+*{ /* estilos a todo  */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth; /* efecto del scroll al precionar  */
+}
+section{  /* relleno a las secciones */
+    padding: 100px;
+}
+.baner{  /* principal */
+    position: relative;
+    min-height: 100vh; /* altura minima */
+    background-image: url(..//img/gym3.jpg);
+    background-size: cover;
+    display: flex;
+
+    align-items: center;
+}
+.baner h2{ /*  h2 del banner */
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.baner h2 .span1{  /* color a go */
+    font-size: 2.5em;
+    font-weight: 500;
+    color: orangered;
+}
+.baner h2 span{   /* color a gym */
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #ffffff;
+}
+.btn{ /* configuracion del boton */
+    position: relative;
+    background: orangered;
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;/* mayusculas */
+    letter-spacing: 2px;/* espacio entre letra */
+    font-weight: 500;
+}
+
+header{ /* menu header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* configuramos el header con la clase sticky */
+header.sticky{
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+header .logo{ /* logo gogym */
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;/* grosor */
+    letter-spacing: 2px;
+}
+
+
+header .logo span{ /* color gym naranjado */
+    color: orangered;
+    text-decoration: none;
+}
+header.sticky .logo{  /* cuando se haga scroll queda negro */
+    color: #111;
+}
+header.sticky span{
+    color: orangered;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a { /* etiquetas a del header */
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 1s;
+}
+header ul li a:hover{
+    background: #dc2f02;
+}
+header.sticky ul li a{
+    color: #111;   /* cunado se haga scroll las etiquetas quedan de color negro */
+}
+header.sticky ul li a:hover{
+    background: #ffd6a5;
+}
+
+.indiceMasaCorporal{
+  background-color: #EDF2F4;
+}
+.tiuloImc { /* contenedor del titulo */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+}
+.tiuloImc h2{
+    font-weight: 600;
+    font-size: 30px;
+
+}
+
+.contenidoImc{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.contenido1imc{ /*  relleno a la derecha */
+    padding-right: 30px;
+}
+.contenido1imc h3{
+font-size: 24px;
+margin-bottom: 10px;
+}
+.contentCalculaimc{
+    min-width: 50%;
+    min-height: 60%;
+    background-color: #caf0f8;
+    margin-left: 80px;
+    
+}
+.contentsection1{
+   width: 50%;
+   height: 50%;
+  float: left;
+  text-align: center;
+  margin: auto;
+}
+.sectionform{
+  
+  width: 50%;
+ height: 50%;
+  float: left;
+  text-align: center;
+  margin: auto;
+}
+.contentsection2{
+
+   max-width: 50%;
+  float: right;
+  min-height: 100%;
+  padding: 20px;
+}
+.contentsection2 .parraf{
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  
+}
+.contentsection2 .parraf h2{
+  font-size: 15px;
+}
+.contentsection2 .parraf p{
+  color: black;
+  margin: auto;
+  
+  font-size: 13px;
+}
+
+.bmi-gender{
+  width: 100%;
+  height: 100%;
+}
+
+.bmi-gender img{
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 40px;
+  display: inline;
+  
+
+}
+.bmi-gender a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  color: #03045e;
+ 
+}
+
+
+.sectionform .form {
+  margin-top: 20px;
+} 
+.sectionform .form input{
+  margin-bottom: 20px;
+  background-color: #00b4d8;
+  width: 100px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+.sectionform .form button{
+  border-radius: 30%;
+  font-size: 20px;
+  width: 120px;
+  border: none;
+  background-color: #00b4d8;
+  color: white;
+  transition: 1s;
+}
+.sectionform .form button:hover{
+  background-color: #03045e;
+  cursor: pointer;
+}
+
+.form-group label{
+  margin-left:20px;
+  font-size: 20px;
+}
+.form-group h4{
+  margin-left:20px;
+  font-size: 20px;
+  color: red;
+}
+.row h2{
+  text-align: center;
+}
+.row img{
+  width: 98%;
+  height: 400p;
+  margin-left: 5px;
+}
+.row .titulorecomendacion h1{
+  margin-left:20px;
+}
+.row .mensjaeimc p{
+  margin-left:20px;
+}
+
+.row .butonimcc{
+text-align: center;
+}
+.row .butonimcc button{
+  border-radius: 30%;
+  font-size: 20px;
+  width: 130px;
+  border: none;
+  background-color: #00b4d8;
+  color: white;
+  transition: 1s;
+  margin-bottom: 20px;
+}
+.row .butonimcc button:focus{
+  background-color: #03045e;
+  cursor: pointer;
+}
+
+
+
+.tiuloAcerca { /* contenedor del titulo */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #111111;
+}
+.tiuloAcerca h2{
+  font-weight: 600;
+  font-size: 30px;
+
+}
+
+.contenido{
+  display: flex;
+  justify-content: space-between;
+}
+.contenido1{ /*  relleno a la derecha */
+  padding-right: 30px;
+}
+.contenido1 h3{
+font-size: 24px;
+margin-bottom: 10px;
+}
+.imgAcerca{
+  min-width: 50%;
+}
+.imgAcerca img{
+
+ max-width: 100%;
+}
+
+
+.bobeda{ /* contenedor de la bobeda */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contactenos{
+    background: #0b090a;
+}
+.formBx{
+    min-width: 60%;
+}
+
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+.contenido .contactenosInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,.formBx form textarea{ /* configuracion de los inputs */
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea{
+    min-height: 200px;
+}
+.formBx form input::placeholder,.formBx form textarea::placeholder{
+    color: orangered;
+}
+
+.formBx form button{ /* boton enviar */
+    width: 100px;
+    height: 50px;
+    color: white;
+    background:orangered ;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+
+}
+.formBx form button:hover{
+  background-color: #e85d04 ;
+}
+
+.contactenosInfo{
+    min-width:40% ;
+}
+.contactenosInfoBx{
+position: relative;
+}
+.contactenosInfoBx .box{
+    position: relative;
+   padding: 20px 0;
+   display: flex;
+}
+
+.contactenosInfoBx .box .icono{ /* iconos */
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+.contactenosInfoBx .box .texto{ /* informacion */
+ display: flex;
+ margin-left: 20px;
+ font-size: 16px;
+ color: #fff;
+ flex-direction: column;
+ font-weight: 300;
+}
+
+.contactenosInfoBx .box .texto h3{
+    font-weight: 500;
+    color: orangered;
+    margin-bottom: 0;
+}
+
+.formBx .formulario__input-error{
+    color: red;
+}
+
+
+
+/*
+estlos del login ----------------------------------------------------------------------- */
+
+
+
+
+
+.login-box { /*contenedor del login*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+  .login-box h2 {/*configuramos titulo login*/
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .login-box .user-box { /*contenedor donde va la informacion*/
+    position: relative;
+  }
+
+  .login-box .user-box input {/*configuramos los input*/
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {/*configuramos los label*/
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {/*cunado demos click en un input el label se pone encima y pequeño*/
+    top: -25px;
+    left: 0;
+    color: orangered;
+    font-size: 12px;
+  }
+
+   .contentbtniniciar{
+       width: 100%;
+       text-align: center;
+       padding: 10px;
+
+   }
+  .login-box  .button-loggin{/*configuramos el boton*/
+
+    position: relative;
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    overflow: hidden;
+    transition: .5s;
+    background: transparent;
+      border-style: none;
+
+  }
+
+
+  .login-box .button-loggin:hover {/*cuando pasemos el mouse se hace un efecto de animacion*/
+    background: orangered;
+    color: #fff;
+    border-radius: 5px;
+    /*proyectamos las sombras*/
+    box-shadow: 0 0 5px orangered,
+                0 0 25px orangered;
+
+  }
+
+
+  .login-box .button-loggin span {/*los span los ponemos en bloque*/
+    position: absolute;
+    display: block;
+  }
+
+
+
+  .login-box .button-loggin span:nth-child(1) { /*configuramos la primera animacion osea la linea de arriba en el boton inisiar*/
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, orangered);
+    animation: btn-anim1 5s linear infinite; /*velocidad de la animacion*/
+  }
+
+  .login-box form .block{
+    color: red;
+
+  }
+
+
+
+  @keyframes btn-anim1 { /* controlamos los pasos intermedios en la secuencia de animación*/
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .login-box .button-loggin span:nth-child(2) {/*configuramos la segunda animacion osea la linea de la derecha en el boton inisiar*/
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, orangered);
+    animation: btn-anim2 4s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .20s
+  }
+
+
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+
+  .login-box .button-loggin span:nth-child(3) {/*configuramos la tercera animacion osea la linea de abajo en el boton inisiar*/
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, orangered);
+    animation: btn-anim3 4s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .4s
+  }
+
+
+
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .login-box .button-loggin span:nth-child(4) {/*configuramos la cuarta animacion osea la linea de la izquierda en el boton inisiar*/
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, orangered);
+    animation: btn-anim4 4s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .65s
+  }
+
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+  .ContraseñaOlvidada{
+      color:orangered;
+      text-decoration: none;
+  }
+
+.contenedorDebajoLogin{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: inline-block;
+
+}
+.contenedorDebajoLogin .blockContent {
+    display: inline;
+    margin-right: 40px;
+    margin-left: 5px;
+}
+.contenedorDebajoLogin .blockContent label {
+   color: white;
+
+}
+.contenedorDebajoLogin .blockContent2 {
+    display: inline;
+
+}
+.contenedorDebajoLogin .blockContent2 .rutaPassRecuperet {
+    text-decoration: red;
+    border-bottom: 1px solid orangered;
+    color: white;
+    transition: 0.5s;
+}
+.contenedorDebajoLogin .blockContent2 .rutaPassRecuperet:hover {
+    color: orangered;
+}
+
+
+/*------------------estilos register------------------------*/
+
+.register-box { /*contenedor del register*/
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+  .register-box h2 {/*configuramos titulo register*/
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .register-box .user-box { /*contenedor donde va la informacion*/
+    position: relative;
+  }
+
+  .register-box .user-box input {/*configuramos los input*/
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    background: transparent;
+  }
+
+  .register-box .user-box select {/*configuramos los input*/
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    background: transparent;
+  }
+
+  .register-box .user-box label {/*configuramos los label*/
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .register-box .user-box input:focus ~ label,
+  .register-box .user-box input:valid ~ label {/*cunado demos click en un input el label se pone encima y pequeño*/
+    top: -20px;
+    left: 0;
+    color: orangered;
+    font-size: 12px;
+  }
+
+
+  .register-box form button {/*configuramos el boton*/
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: transparent;
+    border: none;
+
+  }
+
+
+  .register-box button:hover {/*cuando pasemos el mouse se hace un efecto de animacion*/
+    background: orangered;
+    color: #fff;
+    border-radius: 5px;
+    /*proyectamos las sombras*/
+    box-shadow: 0 0 5px orangered,
+                0 0 25px orangered;
+
+  }
+
+
+  .register-box button span {/*los span los ponemos en bloque*/
+    position: absolute;
+    display: block;
+  }
+
+
+
+  .register-box button span:nth-child(1) { /*configuramos la primera animacion osea la linea de arriba en el boton inisiar*/
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, orangered);
+    animation: btn-anim1 5s linear infinite; /*velocidad de la animacion*/
+  }
+
+
+
+  @keyframes btn-anim1 { /* controlamos los pasos intermedios en la secuencia de animación*/
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .register-box button span:nth-child(2) {/*configuramos la segunda animacion osea la linea de la derecha en el boton inisiar*/
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, orangered);
+    animation: btn-anim2 5s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .25s
+  }
+
+
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+
+  .register-box button span:nth-child(3) {/*configuramos la tercera animacion osea la linea de abajo en el boton inisiar*/
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, orangered);
+    animation: btn-anim3 5s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .5s
+  }
+
+
+
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .register-box button span:nth-child(4) {/*configuramos la cuarta animacion osea la linea de la izquierda en el boton inisiar*/
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, orangered);
+    animation: btn-anim4 5s linear infinite;/*velocidad de la animacion*/
+    animation-delay: .75s
+  }
+
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+small{
+  color: white;
+}
+.butonEnviar{
+    width: 50px;
+}
